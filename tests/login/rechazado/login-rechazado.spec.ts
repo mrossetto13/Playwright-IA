@@ -1,11 +1,12 @@
+import 'dotenv/config';
 import { expect, test } from '@playwright/test';
 import { LoginPage } from '../../../pages/LoginPage';
 import { ERROR_MESSAGES, URL_PATTERNS } from '../../../utils/constants';
-import { lockedEnvCredentials } from '../../../utils/test-data';
 
 test('usuario locked desde .env no puede loguearse', async ({ page }) => {
   const loginPage = new LoginPage(page);
-  const { username, password } = lockedEnvCredentials;
+  const username = process.env.LOCKED_USERNAME ?? '';
+  const password = process.env.LOCKED_PASSWORD ?? '';
 
   expect(username).toBeTruthy();
   expect(password).toBeTruthy();
