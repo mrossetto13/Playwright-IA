@@ -1,4 +1,4 @@
-# Playwright + IA
+# Playwright-IA
 
 Proyecto de automatizacion E2E con Playwright para `saucedemo.com`, organizado con arquitectura Page Object Model (POM), componentes reutilizables y datos centralizados.
 
